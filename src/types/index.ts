@@ -10,6 +10,7 @@ export type AuthorizerState = {
     redirectURL: string;
     client_id: string;
     is_google_login_enabled: boolean;
+    is_vk_login_enabled: boolean;
     is_github_login_enabled: boolean;
     is_facebook_login_enabled: boolean;
     is_linkedin_login_enabled: boolean;
@@ -34,6 +35,7 @@ export type AuthorizerContextPropsType = {
     redirectURL: string;
     client_id: string;
     is_google_login_enabled: boolean;
+    is_vk_login_enabled: boolean;
     is_facebook_login_enabled: boolean;
     is_github_login_enabled: boolean;
     is_linkedin_login_enabled: boolean;

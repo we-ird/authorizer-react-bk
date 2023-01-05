@@ -17,6 +17,7 @@ export const AuthorizerSocialLogin: React.FC<{
   const { config } = useAuthorizer();
   const hasSocialLogin =
     config.is_google_login_enabled ||
+    config.is_vk_login_enabled ||
     config.is_github_login_enabled ||
     config.is_facebook_login_enabled ||
     config.is_linkedin_login_enabled ||
@@ -58,6 +59,20 @@ export const AuthorizerSocialLogin: React.FC<{
             appearance={ButtonAppearance.Default}
             onClick={() => {
               window.location.href = `${config.authorizerURL}/oauth_login/google?${queryParams}`;
+            }}
+          >
+            <Google />
+            Sign in with Google
+          </StyledButton>
+          <br />
+        </>
+      )}
+      {config.is_vk_login_enabled && (
+        <>
+          <StyledButton
+            appearance={ButtonAppearance.Default}
+            onClick={() => {
+              window.location.href = `${config.authorizerURL}/oauth_login/vk?${queryParams}`;
             }}
           >
             <Google />
