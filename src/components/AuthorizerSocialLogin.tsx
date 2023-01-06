@@ -2,6 +2,7 @@ import React from 'react';
 import { Github } from '../icons/github';
 import { Google } from '../icons/google';
 import { Facebook } from '../icons/facebook';
+import { Vk } from '../icons/vk';
 import { StyledButton, StyledSeparator } from '../styledComponents';
 import { useAuthorizer } from '../contexts/AuthorizerContext';
 import { ButtonAppearance } from '../constants';
@@ -75,8 +76,8 @@ export const AuthorizerSocialLogin: React.FC<{
               window.location.href = `${config.authorizerURL}/oauth_login/vk?${queryParams}`;
             }}
           >
-            <Google />
-            Sign in with Google
+            <Vk />
+            Sign in with VK
           </StyledButton>
           <br />
         </>
